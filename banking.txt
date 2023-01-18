@@ -1,0 +1,26 @@
+-> to get all transactions
+	url = "http://localhost:8080/transactions"
+	method get
+
+-> to get particular particular accountnumber's transaction
+	url = "http://localhost:8080/transaction"
+	method pos
+
+	pass accountnumber as body
+
+-> to add funds:
+	url = "http://localhost:8080/addfunds"
+	method post;
+	body:{
+    		"ACCOUNT_NUMBER":"3510555362988032",
+    		"AMOUNT":10000000
+		}
+-> to transfer funds to particular account:
+	url = "http://localhost:8080/transferfunds"
+	method post;
+	body:{
+    		"SENDER_ACCOUNT_NUMBER":"3510555362988032",
+    		"AMOUNT":1000,
+    		"RECEIVER_ACCOUNT_NUMBER":"1234567890"
+		}
+	
